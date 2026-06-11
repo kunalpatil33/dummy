@@ -1,0 +1,14 @@
+d1 = {'a': 100, 'b': 200, 'c': 300}
+d2 = {'a': 300, 'b': 200, 'd': 400}
+result = {}
+for key in d1:
+    result[key] = d1[key]
+
+# Add keys from d2 (add values if key already exists)
+for key in d2:
+    if key in result:
+        result[key] += d2[key]   # Add values for common keys
+    else:
+        result[key] = d2[key]
+
+print("Combined Dictionary:", result)
